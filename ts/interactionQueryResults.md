@@ -1,4 +1,4 @@
-# Execute Functions
+# Execute Functions
 ```
 >> const save_d_dos = await datsClient.saveDDos({isApprove: true, trafficScale: 5}, "auto");
 undefined
