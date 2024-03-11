@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ExecuteMsg",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "save_d_dos"
+      ],
+      "properties": {
+        "save_d_dos": {
+          "type": "object",
+          "required": [
+            "is_approve",
+            "traffic_scale"
+          ],
+          "properties": {
+            "is_approve": {
+              "type": "boolean"
+            },
+            "traffic_scale": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "save_super_computer"
+      ],
+      "properties": {
+        "save_super_computer": {
+          "type": "object",
+          "required": [
+            "cpu_value",
+            "is_approve"
+          ],
+          "properties": {
+            "cpu_value": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            },
+            "is_approve": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "save_cyber_security"
+      ],
+      "properties": {
+        "save_cyber_security": {
+          "type": "object",
+          "required": [
+            "is_approve",
+            "malware_research",
+            "ransomeware_research",
+            "server_security",
+            "web_security"
+          ],
+          "properties": {
+            "is_approve": {
+              "type": "boolean"
+            },
+            "malware_research": {
+              "type": "boolean"
+            },
+            "ransomeware_research": {
+              "type": "boolean"
+            },
+            "server_security": {
+              "type": "boolean"
+            },
+            "web_security": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "save_vulnerabilitiy"
+      ],
+      "properties": {
+        "save_vulnerabilitiy": {
+          "type": "object",
+          "required": [
+            "blockchain_penetration",
+            "contract_penetration",
+            "is_approve",
+            "scada_penetration",
+            "server_penetration",
+            "web_penetration"
+          ],
+          "properties": {
+            "blockchain_penetration": {
+              "type": "boolean"
+            },
+            "contract_penetration": {
+              "type": "boolean"
+            },
+            "is_approve": {
+              "type": "boolean"
+            },
+            "scada_penetration": {
+              "type": "boolean"
+            },
+            "server_penetration": {
+              "type": "boolean"
+            },
+            "web_penetration": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "required": [
+        "save_blockchain"
+      ],
+      "properties": {
+        "save_blockchain": {
+          "type": "object",
+          "required": [
+            "approve_attack_prevention"
+          ],
+          "properties": {
+            "approve_attack_prevention": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+/Users/macbookpro/dats/DatsContractFull/target/debug/libDatsContractFull.dylib: /Users/macbookpro/dats/DatsContractFull/src/contract.rs /Users/macbookpro/dats/DatsContractFull/src/error.rs /Users/macbookpro/dats/DatsContractFull/src/lib.rs /Users/macbookpro/dats/DatsContractFull/src/msg.rs /Users/macbookpro/dats/DatsContractFull/src/state.rs

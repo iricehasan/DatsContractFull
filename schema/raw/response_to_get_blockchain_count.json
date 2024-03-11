@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BlockchainLengthResponse",
+  "type": "object",
+  "required": [
+    "blockchain_length"
+  ],
+  "properties": {
+    "blockchain_length": {
+      "type": "integer",
+      "format": "uint",
+      "minimum": 0.0
+    }
+  },
+  "additionalProperties": false
+}

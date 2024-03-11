@@ -2,10 +2,12 @@ use cosmwasm_schema::{cw_serde, QueryResponses};
 use cosmwasm_std::Addr;
 use crate::state::{Blockchain, CyberSecurity, Ddos, SuperComputer, Vulnerability};
 
+#[cw_serde]
 pub struct InstantiateMsg {
     pub owner: String,
 }
 
+#[cw_serde]
 pub enum ExecuteMsg {
     SaveDDos {
         is_approve: bool,

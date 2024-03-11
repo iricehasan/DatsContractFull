@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "SuperComputersResponse",
+  "type": "object",
+  "required": [
+    "supercomputers"
+  ],
+  "properties": {
+    "supercomputers": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/SuperComputer"
+      }
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "SuperComputer": {
+      "type": "object",
+      "required": [
+        "cpu_value",
+        "id",
+        "is_approve",
+        "user"
+      ],
+      "properties": {
+        "cpu_value": {
+          "type": "integer",
+          "format": "uint8",
+          "minimum": 0.0
+        },
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "is_approve": {
+          "type": "boolean"
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

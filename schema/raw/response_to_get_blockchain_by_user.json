@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "BlockchainResponse",
+  "type": "object",
+  "required": [
+    "approve_attack_prevention",
+    "id",
+    "user"
+  ],
+  "properties": {
+    "approve_attack_prevention": {
+      "type": "boolean"
+    },
+    "id": {
+      "type": "integer",
+      "format": "uint128",
+      "minimum": 0.0
+    },
+    "user": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

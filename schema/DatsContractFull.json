@@ -1,0 +1,872 @@
+{
+  "contract_name": "DatsContractFull",
+  "contract_version": "0.1.0",
+  "idl_version": "1.0.0",
+  "instantiate": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InstantiateMsg",
+    "type": "object",
+    "required": [
+      "owner"
+    ],
+    "properties": {
+      "owner": {
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  },
+  "execute": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ExecuteMsg",
+    "oneOf": [
+      {
+        "type": "object",
+        "required": [
+          "save_d_dos"
+        ],
+        "properties": {
+          "save_d_dos": {
+            "type": "object",
+            "required": [
+              "is_approve",
+              "traffic_scale"
+            ],
+            "properties": {
+              "is_approve": {
+                "type": "boolean"
+              },
+              "traffic_scale": {
+                "type": "integer",
+                "format": "uint8",
+                "minimum": 0.0
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "save_super_computer"
+        ],
+        "properties": {
+          "save_super_computer": {
+            "type": "object",
+            "required": [
+              "cpu_value",
+              "is_approve"
+            ],
+            "properties": {
+              "cpu_value": {
+                "type": "integer",
+                "format": "uint8",
+                "minimum": 0.0
+              },
+              "is_approve": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "save_cyber_security"
+        ],
+        "properties": {
+          "save_cyber_security": {
+            "type": "object",
+            "required": [
+              "is_approve",
+              "malware_research",
+              "ransomeware_research",
+              "server_security",
+              "web_security"
+            ],
+            "properties": {
+              "is_approve": {
+                "type": "boolean"
+              },
+              "malware_research": {
+                "type": "boolean"
+              },
+              "ransomeware_research": {
+                "type": "boolean"
+              },
+              "server_security": {
+                "type": "boolean"
+              },
+              "web_security": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "save_vulnerabilitiy"
+        ],
+        "properties": {
+          "save_vulnerabilitiy": {
+            "type": "object",
+            "required": [
+              "blockchain_penetration",
+              "contract_penetration",
+              "is_approve",
+              "scada_penetration",
+              "server_penetration",
+              "web_penetration"
+            ],
+            "properties": {
+              "blockchain_penetration": {
+                "type": "boolean"
+              },
+              "contract_penetration": {
+                "type": "boolean"
+              },
+              "is_approve": {
+                "type": "boolean"
+              },
+              "scada_penetration": {
+                "type": "boolean"
+              },
+              "server_penetration": {
+                "type": "boolean"
+              },
+              "web_penetration": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "save_blockchain"
+        ],
+        "properties": {
+          "save_blockchain": {
+            "type": "object",
+            "required": [
+              "approve_attack_prevention"
+            ],
+            "properties": {
+              "approve_attack_prevention": {
+                "type": "boolean"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "query": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "QueryMsg",
+    "oneOf": [
+      {
+        "type": "object",
+        "required": [
+          "get_ddoss_by_user"
+        ],
+        "properties": {
+          "get_ddoss_by_user": {
+            "type": "object",
+            "required": [
+              "user"
+            ],
+            "properties": {
+              "user": {
+                "$ref": "#/definitions/Addr"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_ddos_count"
+        ],
+        "properties": {
+          "get_ddos_count": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_all_user_ddos_settings"
+        ],
+        "properties": {
+          "get_all_user_ddos_settings": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_all_user_super_computer_settings"
+        ],
+        "properties": {
+          "get_all_user_super_computer_settings": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_super_computer_by_user"
+        ],
+        "properties": {
+          "get_super_computer_by_user": {
+            "type": "object",
+            "required": [
+              "user"
+            ],
+            "properties": {
+              "user": {
+                "$ref": "#/definitions/Addr"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_super_computer_count"
+        ],
+        "properties": {
+          "get_super_computer_count": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_all_user_cyber_security_settings"
+        ],
+        "properties": {
+          "get_all_user_cyber_security_settings": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_cyber_security_by_user"
+        ],
+        "properties": {
+          "get_cyber_security_by_user": {
+            "type": "object",
+            "required": [
+              "user"
+            ],
+            "properties": {
+              "user": {
+                "$ref": "#/definitions/Addr"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_cyber_security_count"
+        ],
+        "properties": {
+          "get_cyber_security_count": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_all_user_vulnerability_settings"
+        ],
+        "properties": {
+          "get_all_user_vulnerability_settings": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_vulnerability_by_user"
+        ],
+        "properties": {
+          "get_vulnerability_by_user": {
+            "type": "object",
+            "required": [
+              "user"
+            ],
+            "properties": {
+              "user": {
+                "$ref": "#/definitions/Addr"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_vulnerabilitiy_count"
+        ],
+        "properties": {
+          "get_vulnerabilitiy_count": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_blockchain_by_user"
+        ],
+        "properties": {
+          "get_blockchain_by_user": {
+            "type": "object",
+            "required": [
+              "user"
+            ],
+            "properties": {
+              "user": {
+                "$ref": "#/definitions/Addr"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "type": "object",
+        "required": [
+          "get_blockchain_count"
+        ],
+        "properties": {
+          "get_blockchain_count": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ],
+    "definitions": {
+      "Addr": {
+        "description": "A human readable address.\n\nIn Cosmos, this is typically bech32 encoded. But for multi-chain smart contracts no assumptions should be made other than being UTF-8 encoded and of reasonable length.\n\nThis type represents a validated address. It can be created in the following ways 1. Use `Addr::unchecked(input)` 2. Use `let checked: Addr = deps.api.addr_validate(input)?` 3. Use `let checked: Addr = deps.api.addr_humanize(canonical_addr)?` 4. Deserialize from JSON. This must only be done from JSON that was validated before such as a contract's state. `Addr` must not be used in messages sent by the user because this would result in unvalidated instances.\n\nThis type is immutable. If you really need to mutate it (Really? Are you sure?), create a mutable copy using `let mut mutable = Addr::to_string()` and operate on that `String` instance.",
+        "type": "string"
+      }
+    }
+  },
+  "migrate": null,
+  "sudo": null,
+  "responses": {
+    "get_all_user_cyber_security_settings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CyberSecuritiesResponse",
+      "type": "object",
+      "required": [
+        "cybersecurities"
+      ],
+      "properties": {
+        "cybersecurities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/CyberSecurity"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "definitions": {
+        "CyberSecurity": {
+          "type": "object",
+          "required": [
+            "id",
+            "is_approve",
+            "malware_research",
+            "ransomeware_research",
+            "server_security",
+            "user",
+            "web_security"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "uint128",
+              "minimum": 0.0
+            },
+            "is_approve": {
+              "type": "boolean"
+            },
+            "malware_research": {
+              "type": "boolean"
+            },
+            "ransomeware_research": {
+              "type": "boolean"
+            },
+            "server_security": {
+              "type": "boolean"
+            },
+            "user": {
+              "type": "string"
+            },
+            "web_security": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "get_all_user_ddos_settings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "DdossesResponse",
+      "type": "object",
+      "required": [
+        "ddosses"
+      ],
+      "properties": {
+        "ddosses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Ddos"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "definitions": {
+        "Ddos": {
+          "type": "object",
+          "required": [
+            "id",
+            "is_approve",
+            "traffic_scale",
+            "user"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer",
+              "format": "uint128",
+              "minimum": 0.0
+            },
+            "is_approve": {
+              "type": "boolean"
+            },
+            "traffic_scale": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            },
+            "user": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "get_all_user_super_computer_settings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SuperComputersResponse",
+      "type": "object",
+      "required": [
+        "supercomputers"
+      ],
+      "properties": {
+        "supercomputers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SuperComputer"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "definitions": {
+        "SuperComputer": {
+          "type": "object",
+          "required": [
+            "cpu_value",
+            "id",
+            "is_approve",
+            "user"
+          ],
+          "properties": {
+            "cpu_value": {
+              "type": "integer",
+              "format": "uint8",
+              "minimum": 0.0
+            },
+            "id": {
+              "type": "integer",
+              "format": "uint128",
+              "minimum": 0.0
+            },
+            "is_approve": {
+              "type": "boolean"
+            },
+            "user": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "get_all_user_vulnerability_settings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "VulnerabilitiesResponse",
+      "type": "object",
+      "required": [
+        "vulnerabilities"
+      ],
+      "properties": {
+        "vulnerabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Vulnerability"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "definitions": {
+        "Vulnerability": {
+          "type": "object",
+          "required": [
+            "blockchain_penetration",
+            "contract_penetration",
+            "id",
+            "is_approve",
+            "scada_penetration",
+            "server_penetration",
+            "user",
+            "web_penetration"
+          ],
+          "properties": {
+            "blockchain_penetration": {
+              "type": "boolean"
+            },
+            "contract_penetration": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "integer",
+              "format": "uint128",
+              "minimum": 0.0
+            },
+            "is_approve": {
+              "type": "boolean"
+            },
+            "scada_penetration": {
+              "type": "boolean"
+            },
+            "server_penetration": {
+              "type": "boolean"
+            },
+            "user": {
+              "type": "string"
+            },
+            "web_penetration": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "get_blockchain_by_user": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "BlockchainResponse",
+      "type": "object",
+      "required": [
+        "approve_attack_prevention",
+        "id",
+        "user"
+      ],
+      "properties": {
+        "approve_attack_prevention": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_blockchain_count": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "BlockchainLengthResponse",
+      "type": "object",
+      "required": [
+        "blockchain_length"
+      ],
+      "properties": {
+        "blockchain_length": {
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_cyber_security_by_user": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CyberSecurityResponse",
+      "type": "object",
+      "required": [
+        "id",
+        "is_approve",
+        "malware_research",
+        "ransomeware_research",
+        "server_security",
+        "user",
+        "web_security"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "is_approve": {
+          "type": "boolean"
+        },
+        "malware_research": {
+          "type": "boolean"
+        },
+        "ransomeware_research": {
+          "type": "boolean"
+        },
+        "server_security": {
+          "type": "boolean"
+        },
+        "user": {
+          "type": "string"
+        },
+        "web_security": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_cyber_security_count": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "CyberLengthResponse",
+      "type": "object",
+      "required": [
+        "cyberlength"
+      ],
+      "properties": {
+        "cyberlength": {
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_ddos_count": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "DdosLengthResponse",
+      "type": "object",
+      "required": [
+        "ddoslength"
+      ],
+      "properties": {
+        "ddoslength": {
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_ddoss_by_user": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "DdosResponse",
+      "type": "object",
+      "required": [
+        "id",
+        "is_approve",
+        "traffic_scale",
+        "user"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "is_approve": {
+          "type": "boolean"
+        },
+        "traffic_scale": {
+          "type": "integer",
+          "format": "uint8",
+          "minimum": 0.0
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_super_computer_by_user": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SuperComputerResponse",
+      "type": "object",
+      "required": [
+        "cpu_value",
+        "id",
+        "is_approve",
+        "user"
+      ],
+      "properties": {
+        "cpu_value": {
+          "type": "integer",
+          "format": "uint8",
+          "minimum": 0.0
+        },
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "is_approve": {
+          "type": "boolean"
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_super_computer_count": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SuperLengthResponse",
+      "type": "object",
+      "required": [
+        "superlength"
+      ],
+      "properties": {
+        "superlength": {
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_vulnerabilitiy_count": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "VulnerabilityLengthResponse",
+      "type": "object",
+      "required": [
+        "vulnerability_length"
+      ],
+      "properties": {
+        "vulnerability_length": {
+          "type": "integer",
+          "format": "uint",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    },
+    "get_vulnerability_by_user": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "VulnerabilityResponse",
+      "type": "object",
+      "required": [
+        "blockchain_penetration",
+        "contract_penetration",
+        "id",
+        "is_approve",
+        "scada_penetration",
+        "server_penetration",
+        "user"
+      ],
+      "properties": {
+        "blockchain_penetration": {
+          "type": "boolean"
+        },
+        "contract_penetration": {
+          "type": "boolean"
+        },
+        "id": {
+          "type": "integer",
+          "format": "uint128",
+          "minimum": 0.0
+        },
+        "is_approve": {
+          "type": "boolean"
+        },
+        "scada_penetration": {
+          "type": "boolean"
+        },
+        "server_penetration": {
+          "type": "boolean"
+        },
+        "user": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
