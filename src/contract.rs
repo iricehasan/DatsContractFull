@@ -214,7 +214,7 @@ pub fn execute_save_blockchain(
         .add_attribute("user", user.clone()))
 }
 
-// later on maybe add functionality to get contract owner from config
+#[cfg_attr(not(feature = "library"), entry_point)]
 pub fn query(
     deps: Deps,
     _env: Env,
