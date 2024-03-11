@@ -115,9 +115,10 @@ undefined
   gasUsed: 126110n
 }
 undefined
-````
+```
 
 # Query Functions
+```
 >> const queryGetAllUserDdosSettings = await datsClient.getAllUserDdosSettings();
 undefined
 >> console.log(queryGetAllUserDdosSettings);
@@ -244,3 +245,4 @@ undefined
 >> console.log(queryGetBlockchainCount);
 { blockchain_length: 1 }
 undefined
+```
