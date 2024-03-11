@@ -1,4 +1,5 @@
 # Execute Functions
+```
 >> const save_d_dos = await datsClient.saveDDos({isApprove: true, trafficScale: 5}, "auto");
 undefined
 >> console.log(save_d_dos)
@@ -114,6 +115,7 @@ undefined
   gasUsed: 126110n
 }
 undefined
+````
 
 # Query Functions
 >> const queryGetAllUserDdosSettings = await datsClient.getAllUserDdosSettings();
