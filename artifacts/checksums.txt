@@ -1,1 +1,1 @@
-776b5e975d5aa98d004c7e64a2521e5b2995b822d87cba77e198bf9690def976  DatsContractFull.wasm
+c8dd33c79b33cf66d55f39d461b894768c316161673dc37dacab64028d5dfe6e  dats_contract_full.wasm

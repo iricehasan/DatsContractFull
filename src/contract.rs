@@ -17,7 +17,7 @@ use crate::state::{Config, Ddos, SuperComputer, CyberSecurity, Vulnerability, Bl
 pub fn instantiate(
     deps: DepsMut,
     _env: Env,
-    info: MessageInfo,
+    _info: MessageInfo,
     msg: InstantiateMsg,
 ) -> Result<Response, ContractError> {
 

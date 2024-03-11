@@ -1,6 +1,6 @@
 use cosmwasm_schema::write_api;
 
-use DatsContractFull::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
+use dats_contract_full::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
 
 fn main() {
     write_api! {

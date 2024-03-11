@@ -1,5 +1,5 @@
 [package]
-name = "DatsContractFull"
+name = "dats_contract_full"
 version = "0.1.0"
 edition = "2021"
 
